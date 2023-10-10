@@ -1,13 +1,11 @@
 from flask import Flask, render_template, request, redirect, jsonify
 
-from transformers import pipeline
-from transformers import AutoTokenizer, T5ForConditionalGeneration
-
 app = Flask(__name__)
-
 
 @app.route('/submit', methods=['POST'])
 def gen():
+    from transformers import pipeline
+    from transformers import AutoTokenizer, T5ForConditionalGeneration
     content = request.form
     msg = content['msg']
     print(msg)
