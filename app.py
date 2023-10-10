@@ -21,7 +21,7 @@ def gen():
 def submit():
     return '''
     <!doctype html>
-    <title>submit new message</title>
+
     <h1>submit new message</h1>
     <form action="/submit" method="post" enctype=multipart/form-data>
       <input type=text name=msg>
